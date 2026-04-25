@@ -1,0 +1,129 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(ellipse at center, #0d0d0d 0%, #000 70%);
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  animation: fadeIn 0.4s ease;
+}
+
+.auth__logo {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth__logo span {
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+.auth__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth__subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth__label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.auth__input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.auth__input:focus {
+  border-color: #fff;
+  box-shadow: var(--glow);
+}
+
+.auth__input::placeholder { color: var(--text-muted); }
+
+.auth__submit {
+  background: #fff;
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-top: 8px;
+  transition: all var(--transition);
+}
+
+.auth__submit:hover:not(:disabled) {
+  background: #e0e0e0;
+  box-shadow: var(--glow-strong);
+}
+
+.auth__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.auth__switch {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.auth__switch a {
+  color: #fff;
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+
+.auth__switch a:hover { opacity: 0.7; }
