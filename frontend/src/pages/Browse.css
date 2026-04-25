@@ -1,0 +1,98 @@
+.browse {
+  min-height: 100vh;
+  padding: 100px 24px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.browse__header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.browse__title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.browse__count {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.browse__filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+  appearance: none;
+  padding-right: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.filter-select:hover, .filter-select:focus {
+  border-color: var(--border-bright);
+  color: #fff;
+}
+
+.browse__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.browse__skeleton {
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-lg);
+}
+
+.browse__load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.load-more-btn {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid var(--border-bright);
+  padding: 12px 40px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.load-more-btn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: var(--glow);
+}
+
+@media (max-width: 768px) {
+  .browse { padding: 80px 16px 60px; }
+  .browse__grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+}
